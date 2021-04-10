@@ -1,3 +1,3 @@
 # jerrybox
 
-Centos with full tools
+alpine with common tools.

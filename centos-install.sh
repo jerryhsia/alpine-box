@@ -1,10 +1,12 @@
 #!/bin/sh
 
 
-yum install -y zsh tree zip net-tools vim iotop lsof curl wget git sysstat strace mysql bind-utils telnet
+yum install -y zsh tree zip net-tools bind-utils vim lsof curl wget git sysstat strace mysql telnet tcpdump
 yum clean all
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# retry
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
