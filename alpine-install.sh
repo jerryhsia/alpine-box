@@ -20,11 +20,18 @@ if [ ! -f "/root/.zshrc" ];then
 fi
 sed -i 's/robbyrussell/maran/g' ~/.zshrc
 
-apk add tree zip vim lsof wget sysstat strace tcpdump net-tools bind-tools mariadb-client
+apk add tree zip vim lsof wget sysstat strace tcpdump net-tools bind-tools mariadb-client redis
+
+wget http://mirrors.aliyun.com/alpine/edge/testing/x86_64/lrzsz-0.12.20-r1.apk
+apk add lrzsz-0.12.20-r1.apk
+ln -s /usr/bin/lrz /usr/bin/rz
+ln -s /usr/bin/lsz /usr/bin/sz
+
 apk cache clean
+rm -f /*-install.sh
+rm -f *.apk
 
 echo "BUILD SUCCESS"
 
-rm -f /*-install.sh
 
 sleep 5
