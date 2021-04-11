@@ -4,7 +4,7 @@ cd /
 
 init() {
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
-    apk add zsh git curl tree zip vim lsof wget sysstat strace tcpdump net-tools bind-tools mariadb-client redis
+    apk --no-cache add zsh git curl tree zip vim lsof wget sysstat strace tcpdump net-tools bind-tools mariadb-client redis
 }
 
 install_zsh() {
@@ -47,6 +47,7 @@ clean() {
     apk cache clean
     rm -f /*-install.sh
     rm -f /*.apk
+    rm -f /var/cache/apk/*.gz
 
     rm -f /usr/bin/mysql_find_rows
     rm -f /usr/bin/mysql_fix_extensions
