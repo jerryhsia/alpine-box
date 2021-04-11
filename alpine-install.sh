@@ -11,17 +11,12 @@ init() {
 install_zsh() {
     echo "install_zsh start"
 
-    git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+    git clone https://gitee.com/mirrors/oh-my-zsh.git ~/.oh-my-zsh
     if [ ! -d "/root/.oh-my-zsh" ];then
         # retry
-        git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+        git clone https://gitee.com/mirrors/oh-my-zsh.git ~/.oh-my-zsh
     fi
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-
-    #wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh && chmod +x install.sh
-    #./install.sh
-    #./install.sh
-    # rm -f ./install.sh
 
     if [ ! -d "/root/.oh-my-zsh" ];then
         echo "build fail, not found dir [/root/.oh-my-zsh]"
@@ -91,13 +86,9 @@ clean() {
     # rm -f /usr/bin/redis-server
 
     # rm -f /usr/bin/tcpdump.4.99.0
-
     # rm -f /usr/bin/git-*
-
     # rm -f /usr/bin/myisam_ftdump
-
-    cp /bin/zsh /usr/local/bin/sh
-    cp /bin/zsh /usr/local/bin/bash
+    # rm -f /bin/zsh-*
 
     echo "clean end"
 }
