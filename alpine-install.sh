@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /
+pwd
 
 init() {
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
@@ -49,8 +49,8 @@ clean() {
     echo "clean start"
 
     apk cache clean
-    rm -f /*-install.sh
-    rm -f /*.apk
+    rm -f *-install.sh
+    rm -f *.apk
     rm -f /var/cache/apk/*.gz
 
     # rm -f /usr/bin/mysql_find_rows

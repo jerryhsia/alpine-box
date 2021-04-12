@@ -25,6 +25,6 @@ sed -i 's/robbyrussell/maran/g' ~/.zshrc
 
 echo "BUILD SUCCESS"
 
-rm -f /install.sh
+rm -f *-install.sh
 
 sleep 5
