@@ -5,7 +5,7 @@ pwd
 init() {
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     apk add zsh git curl tree zip vim lsof wget sysstat strace tcpdump net-tools bind-tools
-    apk add mariadb-client redis php php-fpm nginx
+    apk add mariadb-client redis php php-fpm nginx go openjdk11
 }
 
 install_zsh() {
