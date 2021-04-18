@@ -6,7 +6,7 @@ init() {
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     apk add zsh git curl tree zip vim lsof wget sysstat strace tcpdump net-tools bind-tools
     apk add mariadb-client php php-fpm
-    # apk add nginx redis go openjdk11
+    apk add nginx redis go openjdk11
 }
 
 install_zsh() {
